@@ -47,7 +47,11 @@ function showRadioValue () {
 }
 
 //Textarea content
-function showTextAreaContent() {}
+function showTextAreaContent() {
+  const myTextAreaValue = document.querySelector('textarea').value
+  const resultDiv = createSimpleDiv(myTextAreaValue)
+  document.body.insertBefore(resultDiv, document.body.childNodes[20])
+}
 
 //Date Value
 function showDateValue() {}
@@ -60,6 +64,7 @@ function submitValues() {
     showTextContent()
     showSelectContent()
     showRadioValue()
+    showTextAreaContent()
   })
 }
 
