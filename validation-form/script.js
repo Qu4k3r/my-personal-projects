@@ -4,21 +4,39 @@ function submitValues() {
   submitButton.addEventListener('click', (event) => {
     event.preventDefault()
     deleteResultDiv()
-    showAllContent()
+    showTextContent()
+    showSelectContent()
   })
 }
 
 submitValues()
 
 // Step 3 & 4 - create a div that shows all the keys and values of data submitted
-function showAllContent() {
-  const arrayOfResults = document.querySelectorAll('input')
-  for (let key of arrayOfResults) {
+function createDivArrays(array) {
+  for (let key of array) {
     const resultDiv = document.createElement('div')
     resultDiv.className = 'result-div'
     resultDiv.innerText = `${key.value}`
     document.body.appendChild(resultDiv)
   }
+}
+
+function createSimpleDiv(element) {
+  const resultDiv = document.createElement('div')
+  resultDiv.className = 'result-div'
+  resultDiv.innerText = element
+  return resultDiv
+}
+
+function showTextContent() {
+  const arrayOfResults = document.querySelectorAll('input[type=text]')
+  createDivArrays(arrayOfResults)
+}
+
+function showSelectContent() {
+  const mySelectValue = document.querySelector('select').value
+  const resultDiv = createSimpleDiv(mySelectValue)
+  document.body.insertBefore(resultDiv, document.body.childNodes[18])
 }
 
 function deleteResultDiv() {
@@ -28,5 +46,4 @@ function deleteResultDiv() {
   }
 }
 
-// The exercise is not complete
-// I'll try to finish it later because right now ... I can't
+// select, type=radio, textarea, type=date

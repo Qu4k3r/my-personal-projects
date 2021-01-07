@@ -11,30 +11,30 @@
   <form action="" method="GET">
     <fieldset>
       <legend>Dados pessoais</legend>
-      <label for="input-name">Nome: 
+      <label for="input-name">Nome *
       </label>
-      <input type="text" name="nome" id="input-name" maxlength="40" required>
+      <input type="text" id="input-name" maxlength="40" required>
       <br>
 
-      <label for="input-email"> E-mail: 
+      <label for="input-email"> E-mail *
       </label>
-      <input type="text" name="email" id="input-email" maxlength="50" required>
+      <input type="text" id="input-email" maxlength="50" required>
       <br>
 
-      <label for="input-cpf"> CPF: </label>
-      <input type="text" name="cpf" id="input-cpf" maxlength="11" required>
+      <label for="input-cpf"> CPF *</label>
+      <input type="text" id="input-cpf" maxlength="11" required>
       <br>
 
-      <label for="input-endereco"> Endereço: </label>
-      <input type="text" name="endereco" id="input-endereco" maxlength="200" required>
+      <label for="input-endereco"> Endereço *</label>
+      <input type="text" id="input-endereco" maxlength="200" required>
       <br>
 
-      <label for="input-cidade"> Cidade: </label>
-      <input type="text" name="cidade" id="input-cidade" maxlength="28" required>
+      <label for="input-cidade"> Cidade *</label>
+      <input type="text" id="input-cidade" maxlength="28" required>
       <br>
 
-      <label for="input-estado"> Estado: </label>
-      <select name="estado" id="input-estado" required>
+      <label for="input-estado"> Estado *</label>
+      <select id="input-estado" required>
         <option></option>
         <option value="df">Brasília</option>
         <option value="rj">Rio de Janeiro</option>
@@ -45,28 +45,26 @@
       <br>
 
       <h2>Tipo de moradia</h2>
-      <input type="radio" name="moradia" id="casa" value="casa" required>
+      <input type="radio" id="casa" value="casa" required>
       <label for="casa">Casa</label>
-      <input type="radio" name="moradia" id="apartamento" value="apartamento">
+      <input type="radio" id="apartamento" value="apartamento">
       <label for="apartamento">Apartamento</label>
     </fieldset>
 
     <fieldset>
       <legend>Dados do último emprego</legend>
       <h2>Resumo do currículo</h2>
-      <textarea name="curriculo" id="curriculo" cols="30" maxlength="1000" rows="5" required></textarea>
+      <textarea id="curriculo" cols="30" maxlength="1000" rows="5" required></textarea>
       <br>
       <br>
-      <label for="input-cargo">Cargo: </label>
-      <input type="text" name="cargo" maxlength="40" id="input-cargo" required>
+      <label for="input-cargo">Cargo *</label>
+      <input type="text" maxlength="40" id="input-cargo" required>
       <br>
-      <label for="input-descricao-cargo">Descrição do cargo: </label>
-      <input type="text" name="descricao-cargo" maxlength="500" id="input-descricao-cargo" required>
+      <label for="input-descricao-cargo">Descrição do cargo *</label>
+      <input type="text" name= maxlength="500" id="input-descricao-cargo" required>
       <br>
-      <span>Data de início: </span>
-      <input type="text" name="dia" class="data" id="dia" maxlength="2" required>/
-      <input type="text" name="mes" class="data" id="mes" maxlength="2" required>/
-      <input type="text" name="ano" class="data" id="ano" maxlength="4" required>
+      <span>Data de início *</span>
+      <input type="date" required>
     </fieldset>
     <button type="submit" id="submit-button">Enviar</button>
     <button type="reset" onclick="deleteResultDiv()">Limpar Formulário</button>
