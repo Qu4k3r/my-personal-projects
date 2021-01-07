@@ -32,7 +32,7 @@ function showTextContent() {
 function showSelectContent() {
   const mySelectValue = document.querySelector('select').value
   const resultDiv = createSimpleDiv(mySelectValue)
-  document.body.insertBefore(resultDiv, document.body.childNodes[18])
+  document.body.insertBefore(resultDiv, document.body.childNodes[20])
 }
 
 //type=radio, textarea, type=date
@@ -41,7 +41,7 @@ function showRadioValue () {
   for (const option of myOptions) {
     if (option.checked) {
       const resultDiv =  createSimpleDiv(option.value)
-      document.body.insertBefore(resultDiv, document.body.childNodes[19])
+      document.body.insertBefore(resultDiv, document.body.childNodes[21])
     }
   } 
 }
@@ -50,14 +50,14 @@ function showRadioValue () {
 function showTextAreaContent() {
   const myTextAreaValue = document.querySelector('textarea').value
   const resultDiv = createSimpleDiv(myTextAreaValue)
-  document.body.insertBefore(resultDiv, document.body.childNodes[20])
+  document.body.insertBefore(resultDiv, document.body.childNodes[22])
 }
 
 //Date Value
 function showDateValue() {
   const dateValue = document.querySelector('input[type=date]').value
   const resultDiv = createSimpleDiv(dateValue)
-  document.body.insertBefore(resultDiv, document.body.childNodes[23])
+  document.body.insertBefore(resultDiv, document.body.childNodes[25])
 }
 
 function submitValues() {

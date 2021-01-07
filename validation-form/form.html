@@ -5,69 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <title>Block 6 | Day 1</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
   <h1>Formulário</h1>
-  <form action="" method="GET">
-    <fieldset>
-      <legend>Dados pessoais</legend>
-      <label for="input-name">Nome *
-      </label>
-      <input type="text" id="input-name" maxlength="40" required>
-      <br>
+  <h3>Dados pessoais</h3>
+  <form action="" method="GET" class="row g-3">
+    <!-- NOME -->
+    <div class="col-md-6">
+      <label for="input-name" class="form-label">Nome *</label>
+      <input type="text" class="form-control" id="input-name" maxlength="40" required>
+    </div>
 
-      <label for="input-email"> E-mail *
-      </label>
-      <input type="text" id="input-email" maxlength="50" required>
-      <br>
+    <!-- E-MAIL -->
+    <div class="col-md-6">
+      <label for="input-email" class="form-label">E-mail *</label>
+      <input type="text" class="form-control" id="input-email" aria-describedby="emailHelp" maxlength="50" required>
+      <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com ninguém</div>
+    </div>
 
-      <label for="input-cpf"> CPF *</label>
-      <input type="text" id="input-cpf" maxlength="11" required>
-      <br>
+    <!-- CPF -->
+    <div class="col-md-6">
+      <label for="input-cpf" class="form-label">CPF *</label>
+      <input type="text" class="form-control" id="input-cpf" maxlength="11" required>
+    </div>
 
-      <label for="input-endereco"> Endereço *</label>
-      <input type="text" id="input-endereco" maxlength="200" required>
-      <br>
+    <!-- ENDERECO -->
+    <div class="col-md-6">
+      <label for="input-endereco" class="form-label">Endereço *</label>
+      <input type="text" class="form-control" id="input-endereco" maxlength="200" required>
+    </div>
 
-      <label for="input-cidade"> Cidade *</label>
-      <input type="text" id="input-cidade" maxlength="28" required>
-      <br>
+    <!-- CIDADE -->
+    <div class="col-md-6">
+      <label for="input-cidade" class="form-label">Cidade *</label>
+      <input type="text" class="form-control" id="input-cidade" maxlength="28" required>
+    </div>
+      
+    <!-- ESTADO -->
+    <div class="col-md-6">
+      <label for="input-estado" class="form-label">Estado *</label>
+        <select class="form-select" id="input-estado" required>
+          <option selected>Selecione seu estado</option>
+          <option value="df">Brasília</option>
+          <option value="rj">Rio de Janeiro</option>
+          <option value="sp">São Paulo</option>
+          <option value="mg">Minas Gerais</option>
+          <option value="rs">Rio grande do Sul</option>
+        </select>
+    </div>
+    
+    <!-- MORADIA -->
+    <h4>Tipo de moradia *</h4>
+    <div class="col-12">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="moradia" id="casa" value="casa" required>
+        <label class="form-check-label" for="casa" class="form-label">Casa</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="moradia" id="apartamento" value="apartamento">
+        <label class="form-check-label" for="apartamento">Apartamento</label>
+      </div>
+    </div>
 
-      <label for="input-estado"> Estado *</label>
-      <select id="input-estado" required>
-        <option></option>
-        <option value="df">Brasília</option>
-        <option value="rj">Rio de Janeiro</option>
-        <option value="sp">São Paulo</option>
-        <option value="mg">Minas Gerais</option>
-        <option value="rs">Rio grande do Sul</option>
-      </select>
-      <br>
+    <h3>Dados do último emprego</h3>
 
-      <h2>Tipo de moradia</h2>
-      <input type="radio" name="moradia" id="casa" value="casa" required>
-      <label for="casa">Casa</label>
-      <input type="radio" name="moradia" id="apartamento" value="apartamento">
-      <label for="apartamento">Apartamento</label>
-    </fieldset>
+    <!-- RESUMO -->
+    <div class="col-12">
+      <div class="form-floating">
+        <textarea class="form-control" id="curriculo" style="height: 100px;" maxlength="1000" required></textarea>
+        <label for="curriculo">Resumo do curriculo *</label>
+      </div>
+    </div>
 
-    <fieldset>
-      <legend>Dados do último emprego</legend>
-      <h2>Resumo do currículo</h2>
-      <textarea id="curriculo" cols="30" maxlength="1000" rows="5" required></textarea>
-      <br>
-      <br>
-      <label for="input-cargo">Cargo *</label>
-      <input type="text" maxlength="40" id="input-cargo" required>
-      <br>
-      <label for="input-descricao-cargo">Descrição do cargo *</label>
-      <input type="text" name= maxlength="500" id="input-descricao-cargo" required>
-      <br>
+    <!-- CARGO -->
+    <div class="col-12">
+      <label for="input-cargo" class="form-label">Cargo *</label>
+      <input type="text" class="form-control" maxlength="40" id="input-cargo" required>
+    </div>
+
+    <!-- DESCRICAO -->
+    <div class="col-12">
+      <label for="input-descricao-cargo" class="form-label">Descrição do cargo *</label>
+      <input type="text" class="form-control" name= maxlength="500" id="input-descricao-cargo" required>
+    </div>
+      
+    <!-- DATA DE INICIO -->
+    <div class="col-12">
       <span>Data de início *</span>
-      <input type="date" required>
-    </fieldset>
-    <button type="submit" id="submit-button">Enviar</button>
-    <button type="reset" onclick="deleteResultDiv()">Limpar Formulário</button>
+      <input type="date" class="form-control" required>
+    </div>
+
+    <!-- SUBMIT & RESET BUTTON -->
+    <div class="col-12">
+      <button type="submit" class="btn btn-outline-success" id="submit-button">Enviar</button>
+      <button type="reset" class="btn btn-outline-danger" onclick="deleteResultDiv()">Limpar Formulário</button>
+    </div>
   </form>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="script.js"></script>
