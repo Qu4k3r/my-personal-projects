@@ -54,7 +54,11 @@ function showTextAreaContent() {
 }
 
 //Date Value
-function showDateValue() {}
+function showDateValue() {
+  const dateValue = document.querySelector('input[type=date]').value
+  const resultDiv = createSimpleDiv(dateValue)
+  document.body.insertBefore(resultDiv, document.body.childNodes[23])
+}
 
 function submitValues() {
   const submitButton = document.querySelector('#submit-button')
@@ -65,6 +69,7 @@ function submitValues() {
     showSelectContent()
     showRadioValue()
     showTextAreaContent()
+    showDateValue()
   })
 }
 
