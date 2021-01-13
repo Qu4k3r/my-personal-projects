@@ -44,3 +44,17 @@ function verifyValues(event) {
 
 addlistener(btnEntrar, alertMsgLogIn);
 addlistener(mySubmitButton, verifyValues);
+
+function showInputGenderCustom() {
+  const radioInput = document.querySelector('#other');
+  const inputGenderCustom = document.querySelector('.other-gender');
+  if (radioInput.checked) {
+    inputGenderCustom.style.display = 'block';
+  }
+  else {
+    inputGenderCustom.style.display = 'none';
+  }
+}
+
+const genderOptions = document.querySelector('.gender-container');
+addlistener(genderOptions, showInputGenderCustom);
