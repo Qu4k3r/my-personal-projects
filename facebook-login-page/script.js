@@ -35,10 +35,39 @@ function verifyRadioValues() {
   return isChecked;
 }
 
+function showFormValues() {
+  const myRightContentDiv = document.querySelector('.primary-right-content');
+  myRightContentDiv.innerText = '';
+  for (let index = 2; index < 7; index += 1) {
+    if (index === 2) {
+      myRightContentDiv.innerText += `Olá, ${myInputValues[index].value}`;
+    }
+    else if (index === 3) {
+      myRightContentDiv.innerText += ` ${myInputValues[index].value} \n \n`;
+    }
+    else if (index === 5) {
+      continue;
+    }
+    else {
+      myRightContentDiv.innerText += `${myInputValues[index].value} \n \n`;
+    }
+  }
+}
+
+function showRadioValue() {
+  const myRightContentDiv = document.querySelector('.primary-right-content');
+  const checkedInput = Array.from(myInputRadioValues).find(element => element.checked);
+  myRightContentDiv.innerText += `${checkedInput.value} \n \n`;
+}
+
 function verifyValues(event) {
   event.preventDefault();
   if (!verifyTextValues() || !verifyRadioValues()) {
     return alert('Campos inválidos');
+  }
+  else {
+    showFormValues();
+    showRadioValue();
   }
 }
 
