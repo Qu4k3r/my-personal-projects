@@ -57,7 +57,9 @@ function showFormValues() {
 function showRadioValue() {
   const myRightContentDiv = document.querySelector('.primary-right-content');
   const checkedInput = Array.from(myInputRadioValues).find(element => element.checked);
-  myRightContentDiv.innerText += `${checkedInput.value} \n \n`;
+  myRightContentDiv.innerText += ` 
+  ${checkedInput.value} 
+  `;
 }
 
 function verifyValues(event) {

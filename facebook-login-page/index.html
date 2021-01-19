@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <title>Facebook Login | Project</title>
 </head>
 
@@ -45,39 +46,51 @@
           <!-- FORM CRIAR USUARIO -->
           <form action="" method="GET">
             <!-- NOME E SOBRENOME -->
-            <div class="input-name-lastname" class="input-user-password">
-              <input  type="text" name="firstname" placeholder="Nome">
-              <input type="text" name="lastname" placeholder="Sobrenome">
+            <div class="row g-3">
+              <div class="col">
+                <input  type="text" class= "form-control" name="firstname" placeholder="Nome">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" name="lastname" placeholder="Sobrenome">
+              </div>
             </div>
             <!-- CELULAR OU E-MAIL -->
-            <div class="new-user-password-birthdate">
-              <input type="text" name="phone_email" placeholder="Celular ou email">
+            <div class="row g-3">
+              <div class="col">
+                <input type="text" class="form-control" name="phone_email" placeholder="Celular ou email">
+              </div>
             </div>
             <!-- NOVA SENHA -->
-            <div class="new-user-password-birthdate">
-              <input type="password" name="password" placeholder="Nova senha">
+            <div class="row g-3">
+              <div class="col">
+                <input type="password" class="form-control" name="password" placeholder="Nova senha">
+              </div>
             </div>
             <!-- DATA DE NASCIMENTO -->
-            <div class="new-user-password-birthdate">
-              <label id="label-birthdate">Data de nascimento</label>
-              <input type="text" name="birthdate" placeholder="dd/mm/aaaa">
+            <div class="mb-3">
+              <label id="label-birthdate" class="form-label">Data de nascimento</label>
+              <input type="text" class="form-control" name="birthdate" placeholder="dd/mm/aaaa">
             </div>
             <!-- GENERO -->
+            <label class="form-label" id="label-gender">Gênero</label>
             <div class="gender-container">
-              <label id="label-gender">Gênero</label>
-              <div class="options">
-                <label for="female">Feminino</label>
-                <input type="radio" name="gender" id="female" value="Feminino">
-                <label for="male">Masculino</label>
-                <input type="radio" name="gender" id="male" value="Masculino">
-                <label for="other">Personalizado</label>
-                <input type="radio" name="gender" id="other" value="Personalizado">
+              <div class="form-check form-check-inline">
+                <label class="form-check-label" for="female">Feminino</label>
+                <input type="radio" class="form-check-input" name="gender" id="female" value="Feminino">
+              </div>
+              <div class="form-check form-check-inline">
+                <label class="form-check-label" for="male">Masculino</label>
+                <input type="radio" class="form-check-input" name="gender" id="male" value="Masculino">
+              </div>
+              <div class="form-check form-check-inline">
+                <label class="form-check-label" for="other">Personalizado</label>
+                <input type="radio" class="form-check-input" name="gender" id="other" value="Personalizado">
               </div>
             </div>
             <div class="other-gender">
-              <input type="text" name="gender-custom" placeholder="Gênero (opcional)">
+              <input type="text" class="form-control" name="gender-custom" placeholder="Gênero (opcional)">
             </div>
-            <button id="facebook-register" type="submit">Cadastre-se</button>
+            <button id="facebook-register" class="submit-button" type="submit">Cadastre-se</button>
           </form>
         </div>
       </section>
@@ -85,4 +98,3 @@
     <script src="script.js"></script>
   </body>
   </html>
-  

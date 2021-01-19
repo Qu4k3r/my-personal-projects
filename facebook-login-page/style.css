@@ -6,7 +6,7 @@ body {
 
 .top-bar {
   align-items: center;
-  background-color: rgb(58, 89, 152);
+  background-image: linear-gradient(rgb(78 104 162), rgb(60 89 152));
   display: flex;
   height: 9vh;
   justify-content: space-evenly;
@@ -15,14 +15,15 @@ body {
 
 .facebook-logo {
   cursor: pointer;
-  width: 11%;
+  width: 9%;
 }
 
 .facebook-login {
   color: aliceblue;
   display: flex;
+  font-size: 0.8rem;
   justify-content: space-between;
-  width: 23vw;
+  width: 21vw;
 }
 
 .form-group {
@@ -41,27 +42,36 @@ body {
   border-radius: 2px;
   color: aliceblue;
   cursor: pointer;
-  padding: 3px;
+  font-weight: 700;
+  padding: 2.5px 5px;
 }
 
 .main-content {
-  background-color: rgb(216, 222, 241);
+  background-image: linear-gradient(white, rgb(211, 216, 232));
   display: flex;
   height: 91vh;
   justify-content: center;
-  padding: 0 2rem;
 }
 
 .left-content {
-  font-size: 2rem;
-  margin-top: 3rem;
-  width: 60vw;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 3rem 4rem 0 0;
+  width: 25vw;
 }
 
 .right-content {
-  font-size: 1rem;
-  margin-top: 3rem;
-  width: 40vw;
+  margin: 1rem 0 0 3rem;
+  width: 25vw;
+}
+
+.right-content p {
+  font-size: 1.2rem;
+}
+
+.right-content h1 {
+  font-weight: 600;
 }
 
 .input-name-lastname {
@@ -83,7 +93,6 @@ body {
 
 .gender-container {
   display: flex;
-  flex-direction: column;
   margin-bottom: 0.4rem;
 }
 
@@ -94,6 +103,28 @@ body {
 }
 
 .other-gender {
-  margin: 0.4rem 0;
   display: none;
+  margin: 0.4rem 0;
+}
+
+.submit-button {
+  background-color: rgb(40, 153, 40);
+  border: 1px solid black;
+  border-radius: 2px;
+  color: aliceblue;
+  font-weight: 700;
+  margin-top: 1rem;
+  outline: none;
+  padding: 0.5rem 3rem;
+  text-decoration: none;
+}
+
+.submit-button:hover {
+  background-color: rgb(44, 185, 44);
+  border-radius: 6px;
+  padding: 0.6rem 3.2rem;
+}
+
+.row {
+  margin-bottom: 0.8rem;
 }
