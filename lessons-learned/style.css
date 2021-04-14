@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1366px;
+  max-height: 768px;
+  background-color: rgb(253 , 251 , 251);
+  font-family: Bitter, serif;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+h1 , h2 , h3 {
+  margin: 15px 0;
+}
+
+p {
+  text-indent: 1.5em;
+  margin: 15px;
+  padding: 15px;
+}
+
+#cabecalho {
+  border-radius: 0 15px 17px;
+  background-color: rgb(38, 84, 136);
+  padding-top: 15px;
+  margin-bottom: 25px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+#titulo {
+  padding-left: 20px;
+  color: aliceblue;
+}
+
+#cabecalho h2 {
+  padding-left: 20px;
+  color: aliceblue;
+}
+
+nav ul {
+  background-color: rgb(44, 102, 168);
+  border-radius: 15px 0;
+  border: 1px solid rgb(223,227,238);
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+nav li a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 500;
+}
+
+nav li:hover {
+  transition: 0.2s;
+  background-color: rgb(70, 115, 167);
+  border-radius: 7px;
+}
+
+nav li a:hover {
+  transition: 0.2s;
+}
+
+#minha_foto {
+  width: 300px;
+  border-radius: 10px 50px;
+  margin: 15% 2% 2%;
+}
+
+#licoes_aprendidas {
+  float: left;
+  width: 25%;
+  margin: 25px;
+}
+
+#licoes_a_aprender {
+  float: right;
+  width: 45%;
+  margin: 29px;
+}
+
+#licoes_aprendidas li {
+  padding: 7px;
+  margin: 0 15px;
+}
+
+#licoes_a_aprender li {
+  padding: 7px;
+  margin: 0 20px;
+}
+
+#meu_aprendizado {
+  float: left;
+  clear: both;
+  width: 40%;
+  padding: 2rem;
+  margin: 1.2rem;
+  text-align: justify;
+  background-color: rgb(112, 193, 179);
+  border-radius: 35px;
+}
+
+#passagem_de_aprendizado {
+  background-color: rgb(112, 193, 179);
+  text-align: justify;
+  float: right;
+  width: 40%;
+  margin: 1.2rem;
+  padding: 2rem;
+  border-radius: 35px;
+}
+
+#rodape {
+  clear: both;
+  background-color: rgb(44, 102, 168);
+  padding: 15px;
+}
+
+.contato a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 700;
+}
+
+.contato a:hover {
+  transition: 0.2s;
+  color: rgb(29, 41, 56);
+}
