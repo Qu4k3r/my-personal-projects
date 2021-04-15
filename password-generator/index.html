@@ -8,6 +8,115 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/4f13e4469d.js" crossorigin="anonymous"></script>
+  <style>
+    @media screen and (max-width: 720px) {
+    body {
+      font-size: 0.8rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .container {
+      padding: 0 20px 20px  20px;
+      margin: 0;
+      width: 14rem;
+    }
+    .password-container {
+      align-items: center;
+      background-color: rgba(122, 120, 120, 0.274);
+      border-radius: 7px;
+      display: flex;
+      height: 25px;
+      justify-content: flex-start;
+      letter-spacing: 1px;
+      padding: 10px;
+      margin: 10px 0;
+      position: relative;
+    }
+
+    .password-container #result {
+      color: rgb(49, 179, 49);
+      word-wrap: break-word;
+    }
+
+    .password-container .btn {
+      background-color: rgba(0, 0, 0, 0);
+      height: 30px;
+      outline: none;
+      padding: 0;
+      right: 5px;
+      top: auto;
+      width: 30px;
+    }
+
+    .btn {
+      border: none;
+      cursor: pointer;
+      font-size: 0.8rem;
+      padding: 8px 12px;
+    }
+
+    .btn-large {
+      background-color: rgba(255, 255, 255, 0) ;
+      border: 1px double white;
+      border-radius: 7px;
+      color: white;
+      display: block;
+      outline: none;
+      width: 100%;
+      transition: 0.5s;
+    }
+
+    .btn-large:hover {
+      box-shadow: 1px 1px 10px white;
+      background-color: white;
+      color: black;
+    }
+
+    .option {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+    }
+
+    .options {
+      padding: 5px 0;
+    }
+    .social-btn {
+      font-size: 0.8rem;
+    }
+    .social-container {
+      align-items: center;
+      border: 2px solid;
+      border-image: linear-gradient(#2e69ff, #bc4fcb) 1;
+      backdrop-filter: blur(5px);
+      bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      right: 15px;
+      width: 17rem;
+      transform: translateX(110%);
+      transition: transform 0.5s ease-in-out;
+    }
+    .social-container ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 5px;
+      margin-top: 10px;
+    }
+    .social-container li {
+      padding: 7px;
+    }
+    .fab {
+      font-size: 1rem;
+      border-radius: 100%;
+      border: 1px solid #bc4fcb;
+      padding: 8px;
+    }
+  }
+  </style>
 </head>
 <body>
   <section class="container">
@@ -76,7 +185,7 @@
     </div>
     <button class="btn btn-large">Gerar senha</button>
   </section>
-  <aside>
+  <footer>
     <button class="social-btn">
       Contato
     </button>
@@ -90,7 +199,7 @@
         <li><a href="https://www.instagram.com/_nevs_k/" target="_blank"><i class="fab fa-instagram" style="color: transparent; position: relative; background-clip:text; background-image: linear-gradient(#2e69ff, #bc4fcb);-webkit-background-clip: text"></i></a></li>
       </ul>
     </div>
-  </aside>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
