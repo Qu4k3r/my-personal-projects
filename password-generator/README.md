@@ -1,3 +1,3 @@
 ## Password Generator
 
-![Password Generator](images/sec.gif)
+![Password Generator](images/example.png)
